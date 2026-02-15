@@ -1,7 +1,7 @@
-import { Section } from "@/components/section";
-import { client } from "@/sanity/client";
-import { qPage } from "@/sanity/queries";
-import { PortableTextBlock } from "@/components/portable-text";
+import { Section } from "../../../components/section";
+import { client } from "../../../sanity/client";
+import { qPage } from "../../../sanity/queries";
+import { PortableTextBlock } from "../../../components/portable-text";
 
 export default async function CfpPage() {
   const page = await client.fetch(qPage("cfp")).catch(() => null);
