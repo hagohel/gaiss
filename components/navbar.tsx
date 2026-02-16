@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -26,12 +27,12 @@ export function Navbar({
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-neutral-900 border-b">
+    <header className="sticky top-0 z-50 border-b border-[rgb(var(--border))] bg-[rgb(var(--bg))]/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Brand */}
         <Link href="/" className="flex items-baseline gap-2 min-w-0">
           <span className="font-semibold tracking-tight">{title}</span>
-          <span className="hidden md:inline text-neutral-600 truncate">
+          <span className="hidden md:inline text-sm text-[rgb(var(--muted))] truncate">
             {subtitle}
           </span>
         </Link>
@@ -42,24 +43,27 @@ export function Navbar({
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-neutral-700 hover:text-black"
+              className="text-sm text-[rgb(var(--fg))] hover:text-[rgb(var(--primary))]"
             >
               {item.label}
             </Link>
           ))}
 
           <Link href={registerHref}>
-            <Button className="rounded-full px-5">Register</Button>
+            <Button className="rounded-full px-5 bg-[rgb(var(--primary))] text-[rgb(var(--primary-foreground))] hover:opacity-90">
+  Register
+</Button>
           </Link>
-
-          <Link href="/studio" className="text-sm text-neutral-700 hover:text-black">
+          <Link href="/studio" className="text-sm text-[rgb(var(--fg))] hover:text-[rgb(var(--primary))]">
             Admin
           </Link>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 lg:hidden">
-          <Link href={registerHref} className="hidden sm:inline-flex">
+         <ThemeToggle />
+         <Link href={registerHref} className="hidden sm:inline-flex">
             <Button className="rounded-full px-4">Register</Button>
           </Link>
 
@@ -76,13 +80,13 @@ export function Navbar({
 
       {/* Mobile menu panel */}
       {open && (
-        <div className="lg:hidden border-t bg-white">
+        <div className="lg:hidden border-t border-[rgb(var(--border))] bg-[rgb(var(--bg))]">
           <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-neutral-800"
+                className="text-sm text-[rgb(var(--fg))]"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -95,7 +99,7 @@ export function Navbar({
               </Link>
               <Link
                 href="/studio"
-                className="text-sm text-neutral-700"
+                className="text-sm text-[rgb(var(--fg))]"
                 onClick={() => setOpen(false)}
               >
                 Admin
