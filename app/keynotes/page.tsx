@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Section } from "@/components/section";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { client } from "@/sanity/client";
-import { qKeynotes } from "@/sanity/queries";
-import { urlFor } from "@/sanity/image";
-import { PortableTextBlock } from "@/components/portable-text";
+import { Section } from "../../components/section";
+import { Card, CardContent, CardHeader } from "../../components/ui/card";
+import { client } from "../../sanity/client";
+import { qKeynotes } from "../../sanity/queries";
+import { urlFor } from "../../sanity/image";
+import { PortableTextBlock } from "../../components/portable-text";
 
 export default async function KeynotesPage() {
   const keynotes = await client.fetch(qKeynotes).catch(() => []);
