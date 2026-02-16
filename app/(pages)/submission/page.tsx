@@ -1,6 +1,7 @@
-import { Section } from '../../../components/section'
-import { client } from '../../../sanity/client'
-import { PortableTextBlock } from '../../../components/portable-text'
+import { Section } from "../../../components/section";
+import { client } from "../../../sanity/client";
+import { qPage } from "../../../sanity/queries";
+import { PortableTextBlock } from "../../../components/portable-text";
 
 export default async function SubmissionPage() {
   const page = await client.fetch(qPage("submission")).catch(() => null);
