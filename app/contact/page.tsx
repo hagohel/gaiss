@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Section } from '../../components/section'
-import { Button } from '../../components/ui/button'
+import { Section } from "../../components/section";
+import { Button } from "../../components/ui/button";
 import { Card, CardContent, CardHeader } from "../../components/ui/card";
 
 export default function ContactPage() {
