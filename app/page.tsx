@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Section } from "@/components/section";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { client } from "@/sanity/client";
-import { qHome, qSettings } from "@/sanity/queries";
+import { Section } from "../components/section";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { client } from "../sanity/client";
+import { qHome, qSettings } from "../sanity/queries";
 
 export default async function HomePage() {
   const [settings, home] = await Promise.all([
