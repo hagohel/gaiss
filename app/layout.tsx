@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-  <html lang="en" suppressHydrationWarning>
-    <body className="min-h-screen flex flex-col">
-      <ThemeProvider>
-        <Navbar />
-        <main className="flex-1 pt-20">{children}</main>
-        <Footer />
-      </ThemeProvider>
-    </body>
-  </html>
-);
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-[rgb(var(--bg))] text-[rgb(var(--fg))]">
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1 pt-20">{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
