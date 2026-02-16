@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { Section } from '../../components/section'
 import { Button } from '../../components/ui/button'
-import { Card } from '../../components/ui/card'
+import { Card, CardContent, CardHeader } from "../../components/ui/card";
+
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
