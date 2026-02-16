@@ -1,4 +1,4 @@
 import { createClient } from "next-sanity";
-import { sanityConfig } from "@/sanity/env";
+import { sanityConfig } from "./env";
 
 export const client = createClient(sanityConfig);
