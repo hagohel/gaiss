@@ -4,7 +4,6 @@ import { Section } from '../../components/section'
 import { Button } from '../../components/ui/button'
 import { Card, CardContent, CardHeader } from "../../components/ui/card";
 
-
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [message, setMessage] = useState<string>("");
