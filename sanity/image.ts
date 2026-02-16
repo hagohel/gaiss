@@ -1,5 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
-import { sanityConfig } from "@/sanity/env";
+import { sanityConfig } from "./env";
+
 
 const builder = imageUrlBuilder(sanityConfig);
 
