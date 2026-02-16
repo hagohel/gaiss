@@ -25,5 +25,10 @@
     "@sanity/image-url": "1.0.2",
     "@portabletext/react": "3.0.18",
     "resend": "4.0.0"
+  },
+    "devDependencies": {
+    "typescript": "^5.5.4",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.3.3"
   }
 }
