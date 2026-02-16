@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Section } from "@/components/section";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { client } from "@/sanity/client";
-import { qRegistration } from "@/sanity/queries";
+import { Section } from "../../components/section";
+import { Card, CardContent, CardHeader } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
+import { client } from "../../sanity/client";
+import { qRegistration } from "../../sanity/queries";
 import { clsx } from "clsx";
 
 export default async function RegistrationPage() {
