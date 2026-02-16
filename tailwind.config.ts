@@ -6,6 +6,7 @@ export default {
     "./components/**/*.{ts,tsx}",
     "./sanity/**/*.{ts,tsx}"
   ],
+  darkMode: ["class"],
   theme: {
     extend: {
       fontFamily: {
