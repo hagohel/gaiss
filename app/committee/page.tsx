@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Section } from "@/components/section";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { client } from "@/sanity/client";
-import { qCommittee } from "@/sanity/queries";
-import { urlFor } from "@/sanity/image";
+import { Section } from "../../components/section";
+import { Card, CardContent, CardHeader } from "../../components/ui/card";
+import { client } from "../../sanity/client";
+import { qCommittee } from "../../sanity/queries";
+import { urlFor } from "../../sanity/image";
 
 function groupByRole(items: any[]) {
   const map = new Map<string, any[]>();
