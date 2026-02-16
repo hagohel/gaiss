@@ -11,7 +11,7 @@ export default defineType({
     defineField({ name: "currency", title: "Currency", type: "string", initialValue: "USD" }),
     defineField({ name: "perks", title: "Perks", type: "array", of: [{ type: "string" }] }),
     defineField({ name: "stripePaymentLink", title: "Stripe payment link", type: "url" }),
-    defineField({ name: "featured", title: "Featured", type: "boolean", initialValue: False }),
+    defineField({ name: "featured", title: "Featured", type: "boolean", initialValue: false }),
     defineField({ name: "order", title: "Order", type: "number", initialValue: 100 }),
   ],
 });
